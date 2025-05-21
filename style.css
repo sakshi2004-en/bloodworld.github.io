@@ -1,0 +1,441 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+.navbar{
+
+    width: 100%;
+     background-color: rgb(154, 168, 159); 
+    position: fixed;
+    padding: 20px 0;
+    z-index: 998;
+    transition: all 0.3s ease;
+    font-family: 'Ubuntu', sans-serif;
+     
+}
+nav.sticky{
+    background: rgb(4, 116, 13);
+    padding: 13px 0;
+  }
+  nav .navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .logo{
+    width: 500px;
+  }
+  nav .navbar .logo a{
+    font-weight: 500;
+    font-size: 35px;
+    color:rgb(6, 84, 19);
+  }
+  nav.sticky .navbar .logo a{
+    color: #fff;
+  }
+  nav .navbar .menu{
+    display: flex;
+    position: none;
+    margin-left: 300px;
+    gap: 23px;
+  }
+  nav .navbar .menu li{
+    list-style: none;
+    margin: 0 8px;
+    
+  }
+  .navbar .menu a{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(6, 84, 19);
+    padding: 6px 0;
+    transition: all 0.4s ease;
+  }
+  .navbar .menu a:hover{
+    color: rgb(5, 41, 10);
+    text-decoration: underline;
+  }
+  /* home start */
+  .home{
+    height: 90vh;
+    width: 100%;
+    background: url("./first\ img.jpeg") no-repeat;
+    background-position: left;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .home .home-content{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home .text-one{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800px;
+    font-size: 70px;
+    color: rgb(80, 145, 80);
+    margin-left: 130vh;
+  }
+  .home .text-two{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(88, 112, 88);
+    margin-top: 17px;
+    margin-left: 130vh;
+  }
+  .join-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #0b5112;
+    background-color: #7f9b82;
+    border: none;
+    border-radius: 9px 0px 9px 0px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    margin-top: 120px;
+    margin-left: 400px;
+    font-weight: 30px;
+  }
+  .text {
+    font: bold 1.25rem/1 poppins;
+    color: #71DFBE;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-52%);
+    left: 0;
+    right: 0;
+  }   
+  .home button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #0b5112;
+    background-color: #7f9b82;
+    border: none;
+    border-radius: 9px 0px 9px 0px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+    margin-top: 120px;
+    margin-left: 400px;
+    font-weight: 30px;
+  }
+  
+  .home button:hover {
+    background-color: #566f5c;
+  }
+/* home end */
+
+/* donate starts */
+  #donate{
+    height: 450px;
+    width: 100%;
+    background-color: #788d76;
+    font-family: 'Ubuntu', sans-serif;
+   
+  }
+  .donate h1{
+    padding-left: 20px;
+    padding-top: 40px;
+    color: rgb(248, 250, 249);
+  }
+  .donate .donate-content{
+    padding-left: 470px;
+    padding-top: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(9, 73, 9);
+  }
+  .donate button{
+    background-color: rgb(32, 100, 49);
+    border: transparent;
+    height: 50px;
+    width: 130px;
+    border-radius: 25px;
+    font-size: larger;
+    margin-left: 710px;
+    margin-top: 70px;
+  }
+h4{
+    color: #fff;
+  }
+  .donate button:hover{
+    color: rgb(21, 54, 17);
+    background-color: rgb(103, 130, 105);
+
+  }
+  /* INFO SECTION START FROM HERE */
+  .info{
+    background-color: white;
+    height: 1760px;
+    width: 100%;
+  }
+  .infodiv{
+    display: flex;
+  }
+  .infodiv h1{
+    color: rgba(57, 69, 108, 0.952);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800px;
+    font-size: 50px;
+    padding-top: 80px;
+    padding-left: 28px;
+  }
+  .infodiv h2{
+    color: rgb(62, 62, 89);
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: 10px;
+  }
+.infodiv h3{
+  color: rgb(81, 81, 149);
+  font-family: 'Ubuntu', sans-serif;
+  padding-left: 38px;
+  padding-top: 70px;
+}
+
+/* REQUEST FORM START HERE */
+
+.patientF{
+  height: 1230px;
+  width: 100%;
+  background-color: rgb(152, 189, 155);
+}
+
+h1, h2 { 
+  text-align: center;
+  color: #244820;
+  padding-top: 40px;
+}
+
+form {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #b2c8b4;
+  border: 1px solid #032306;
+  border-radius: 8px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-row fieldset {
+  width: 48%;
+  border: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #092d14;
+  
+}
+
+input[type="text"], input[type="tel"], input[type="date"], select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: #8ca78f;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+ #preview-section {
+  margin-top: 30px;
+  background-color: #175b2f;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+} 
+
+/* #summary {
+  color: #0b3a13;
+  font-size: 16px;
+} */
+
+#reqbtn{
+  background-color: #619163;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+}
+
+#reqbtn:hover {
+  background-color: #45a049;
+}
+select{
+  background-color: #8ca78f;
+}
+.left-align-preview {
+  text-align: left;
+}
+.full-width{
+color: #032a07;
+}
+ol {
+  list-style-type: none; /* Remove default numbering */
+}
+ol li::before {
+  content: "● ";
+  font-size: 1.2em; /* Adjust size if needed */
+  color: rgb(10, 68, 28); /* Change color if needed */
+}
+.terms{
+  font-size: xx-large;
+  color: #042f09;
+  text-align: center;
+  padding-top: 30px; 
+}
+ol{
+  font-size: larger;
+  color: #042f09;
+  padding-left: 460px;
+  padding-top: 50px;
+}
+
+/* FOOD SRCTION */
+.projects{
+  height: 470px;
+  width: 100%;
+  background-color: #5b7f62;
+}
+.projects h1{
+  text-decoration: underline;
+}
+.projects .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 38px;
+}
+.projects .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 4 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(9, 61, 22, 0.952);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.projects .boxes .box:hover{
+  background: #254b2b;
+  color: #0a2816;
+}
+.projects .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #284534;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #0b2a08;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+p{
+  color: rgb(3, 27, 3);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.topic{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+.boxes .box:hover .icon{
+  background-color: #0a2f07;
+  color: green;
+}
+.projects .boxes .box:hover .topic,
+.projects .boxes .box:hover p{
+  color: #09330e;
+  transition: all 0.4s ease;
+}
+.projects .boxes .box:hover .topic,
+.projects .boxes .box:hover p{
+  color: #70b77c;
+}
+
+
+.contact{
+  height: 200px;
+  width: 100%;
+  background-color: #7f9b82;
+
+}
+.contact .animated{
+  color: #032a07;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';
+  text-align: center;
+}
+/* Base Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6e7b71;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 15px;
+} 
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* Hide Hamburger by Default */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+

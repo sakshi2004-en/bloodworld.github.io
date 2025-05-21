@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED WORLD</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="https://icon-library.com/images/blood-icon-png/blood-icon-png-7.jpg">
+</head>
+
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="#">RED WORLD.</a></div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#info">Info</a></li>
+                <li><a href="./aboutus.html">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./admin.html"><i class="fa-solid fa-user-tie"></i></a></li>
+                <li><a href="./login.html"><i class="fa-solid fa-users"></i></a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION START HERE -->
+
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text">
+                <div class="text-one">Blood Donation </div>
+                <br>
+                <div class="text-two">A single drop can bring new hope, A tiny act, a life to cope<br>
+                    Be a hero don't delay Donate blood, save lives today!<br>
+                    <br>
+                    <button class="join">Join Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- DONATE SECTUIN START HERE!-->
+
+    <section class="donate" id="donate">
+
+        <h1 id="line">HOPE BEGAINS WITH A DROP.</h1>
+        <div class="donate-content">
+
+            <br>
+            <br>
+            <h3 id="lines">BE A HERO—YOUR ONE DONATION CAN SAVE MULTIPLE LIVES!
+                <br>
+                A FEW MINUTES OF YOUR TIME CAN GIVE SOMEONE A LIFETIME OF HOPE.
+                <br>
+                BLOOD HAS NO SUBSTITUTE; YOUR KINDNESS IS THE ONLY CURE.
+                <br>
+                DONATE BLOOD TODAY AND BE THE REASON SOMEONE SEES TOMORROW!
+            </h3>
+        </div>
+        <button id="donatebtn"> <a href="../donateform.html">
+                <h4>DONATE</h4>
+            </a></button>
+
+    </section>
+
+
+    <!-- INFO SECTION START HERE -->
+
+
+    <section class="info" id="info">
+
+        <ul class="infodiv mt-5">
+            <li><a>
+                    <h1 class="mt-5">Eligibility Criteria for Blood Donation</h1><br>
+                    <br>
+                    <h2> To donate blood, a person must meet certain health and lifestyle requirements to ensure safety
+                        for both the
+                        donor and recipient. The common conditions include:</h2><br>
+
+
+                    <h3>1. Age: 18-65 years (varies by country)<br>
+                        2.Weight: At least 50 kg (110 lbs)<br>
+                        3.Hemoglobin Level: Minimum of 12.5 g/dL<br>
+                        4.Blood Pressure: Within normal limits (typically 100/60 mmHg to 140/90 mmHg)<br>
+                        5.General Health: Should be in good health with no infections, fever, or recent illness
+                </a></li>
+            </h3>
+            <li><a><img src="./sec img.jpeg"></a></li>
+        </ul>
+
+        <div class="patientF">
+
+            <h1>Blood Donation Request Form</h1>
+
+            <form id="blood-donation-form" action="/submit-blood-donation" method="POST">
+                <!-- Form Fields -->
+
+                <div class="form-row">
+                    <fieldset class="full-width">
+                        <legend>Patient Information</legend>
+                        <label for="reason">Reason for Blood Requirement:</label><br>
+                        <input type="radio" id="bleeding" name="reason" value="Bleeding" onchange="updatePreview()">
+                        Bleeding<br>
+                        <input type="radio" id="baby-delivery" name="reason" value="Baby Delivery"
+                            onchange="updatePreview()"> Baby Delivery<br>
+                        <input type="radio" id="blood-deficiency" name="reason" value="Blood Deficiency"
+                            onchange="updatePreview()"> Blood Deficiency<br>
+                        <input type="radio" id="surgery" name="reason" value="Surgery/Operation"
+                            onchange="updatePreview()"> Surgery/Operation<br>
+                        <input type="radio" id="accident" name="reason" value="Accident" onchange="updatePreview()">
+                        Accident<br>
+                        <input type="radio" id="other" name="reason" value="Other" onchange="updatePreview()"> Other<br>
+                        <label for="other-reason" id="other-reason-label" style="display: none;">Please describe the
+                            patient's condition:</label>
+                        <input type="text" id="other-reason" name="other_reason" style="display: none;"
+                            oninput="updatePreview()">
+                    </fieldset>
+                </div>
+
+                <div class="form-row">
+                    <!-- Blood Group and Hemoglobin Level -->
+                    <fieldset>
+                        <legend>Blood Group</legend>
+                        <label for="blood-group">Select Blood Group:</label>
+                        <select id="blood-group" name="blood_group" required onchange="updatePreview()">
+                            <option value="" disabled selected>Select blood group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Hemoglobin Level</legend>
+                        <label for="hemoglobin">Select Hemoglobin Level (g/dL):</label><br>
+                        <select id="hemoglobin1" name="hemoglobin_major" onchange="updatePreview()">
+                            <option value="" disabled selected>Major</option>
+                            <option value="Below 8">Below 8</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                        .
+                        <select id="hemoglobin2" name="hemoglobin_minor" onchange="updatePreview()">
+                            <option value="" disabled selected>Minor</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                    </fieldset>
+                </div>
+
+                <div class="form-row">
+                    <!-- Blood Volume and Date Needed -->
+                    <fieldset>
+                        <legend>Required Blood Volume</legend>
+                        <label for="blood-volume">Required Blood Volume (in bags):</label>
+                        <select id="blood-volume" name="blood_volume" required onchange="updatePreview()">
+                            <option value="" disabled selected>Select volume</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Date Needed for Blood Donation</legend>
+                        <label for="date-needed">Select the Date:</label>
+                        <input type="date" id="date-needed" name="date_needed" required onchange="updatePreview()">
+                    </fieldset>
+                </div>
+
+                <div class="form-row">
+                    <label for="contact-number"></label><br>
+                    <input type="tel" id="phone-number" name="phone_number" placeholder="Enter phone number" required
+                        oninput="updatePreview()">
+                </div>
+
+                <div class="form-row">
+                    <label for="patient-name"></label><br>
+                    <input type="text" id="patient-name" name="patient-name" placeholder="Enter patient name" required
+                        oninput="updatePreview()">
+                </div>
+                <button type="submit" id="reqbtn">Submit Request</button>
+            </form>
+
+
+            <h3 class="terms">Terms and Conditions for Blood Request Eligibility for Request<br></h3>
+            <ol>
+                <li>The requestor must be a patient, guardian, or authorized representative.</li>
+                <li>The patient must have a valid medical requirement for blood transfusion.</li>
+                <li>A doctor's prescription or hospital request letter is mandatory.</li>
+                <li>Government-approved ID proof of the patient or requestor is required.</li>
+                <li>Blood is subject to availability and compatibility with the patient's blood group</li>
+                <li>The blood bank/hospital is not responsible for adverse reactions post-transfusion.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="content">
+            <div class="title"><span>
+                    <h1>Here are some fruits that help increase blood level</h1>
+                </span></div>
+            <div class="boxes">
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <div class="topic">APPLE</div>
+                    <p>Contains a moderate amount of iron and vitamin C, which help in hemoglobin synthesis and improve
+                        iron absorption. Apples contain polyphenols and flavonoids that improve blood circulation and
+                        prevent oxidative damage to red blood cells (RBCs). </p>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa-solid fa-carrot"></i>
+                    </div>
+                    <div class="topic">CARROT</div>
+                    <p>Carrots contain vitamin C, which enhances iron absorption from other foods.Helps in the
+                        production of red blood cells (RBCs) and improves overall blood quality. </p>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <div class="topic">SPINACH</div>
+                    <p>The green pigment in spinach (chlorophyll) has a similar structure to hemoglobin and may help
+                        improve red blood cell count.</p>
+                </div>
+
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa-solid fa-lemon"></i>
+                    </div>
+                    <div class="topic">DATES</div>
+                    <p>The iron in dates directly contributes to hemoglobin formation, improving oxygen transport in the
+                        blood. Copper helps the body absorb iron efficiently and aids in red blood cell production.
+                        </style>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="contact" id="contact">
+        <div class="animated">
+            <h2>Contact Us</h2>
+            <br>
+            <p><strong>Email:</strong>sakshibarote@gmail.com</p>
+            <p><strong>Phone:</strong>9860803575</p>
+            <p><strong>Admin:</strong>Sakshi Barote</p>
+           
+        </div>
+    </section>
+
+    <!-- CONTACT STAT FROM HERE -->
+
+    <script>
+        // Function to update the preview in real-time
+        function updatePreview() {
+            // Get form values
+            const reason = document.querySelector('input[name="reason"]:checked')?.value;
+            const bloodGroup = document.getElementById("blood-group").value;
+            const hemoglobinMajor = document.getElementById("hemoglobin1").value;
+            const hemoglobinMinor = document.getElementById("hemoglobin2").value;
+            const bloodVolume = document.getElementById("blood-volume").value;
+            const dateNeeded = document.getElementById("date-needed").value;
+            const phoneNumber = document.getElementById("phone-number").value;
+
+
+
+            // Update form summary
+            const summary = `
+                <strong>Patient Information:</strong> ${reason || "N/A"}<br>
+                <strong>Blood Group:</strong> ${bloodGroup || "N/A"}<br>
+                <strong>Hemoglobin Level:</strong> ${hemoglobinMajor}.${hemoglobinMinor || "0"} g/dL<br>
+                <strong>Required Blood Volume:</strong> ${bloodVolume || "N/A"} bags<br>
+                <strong>Date Needed for Blood Donation:</strong> ${dateNeeded || "N/A"}<br>
+            `;
+        }
+
+        // Initialize preview on page load
+        document.addEventListener("DOMContentLoaded", updatePreview);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menu = document.querySelector(".menu");
+            const hamburger = document.createElement("div");
+
+            hamburger.classList.add("hamburger");
+            hamburger.innerHTML = "&#9776;"; // Unicode for ☰ (menu icon)
+            document.querySelector(".navbar").appendChild(hamburger);
+
+            hamburger.addEventListener("click", function () {
+                menu.classList.toggle("menu");
+            });
+        });
+
+        var basicTimeline = anime.timeline({
+            autoplay: false
+        });
+
+        var pathEls = $(".check");
+        for (var i = 0; i < pathEls.length; i++) {
+            var pathEl = pathEls[i];
+            var offset = anime.setDashoffset(pathEl);
+            pathEl.setAttribute("stroke-dashoffset", offset);
+        }
+
+        basicTimeline
+            .add({
+                targets: ".text",
+                duration: 1,
+                opacity: "0"
+            })
+            .add({
+                targets: ".button",
+                duration: 1300,
+                height: 10,
+                width: 300,
+                backgroundColor: "#2B2D2F",
+                border: "0",
+                borderRadius: 100
+            })
+            .add({
+                targets: ".progress-bar",
+                duration: 2000,
+                width: 300,
+                easing: "linear"
+            })
+            .add({
+                targets: ".button",
+                width: 0,
+                duration: 1
+            })
+            .add({
+                targets: ".progress-bar",
+                width: 80,
+                height: 80,
+                delay: 500,
+                duration: 750,
+                borderRadius: 80,
+                backgroundColor: "#71DFBE"
+            })
+            .add({
+                targets: pathEl,
+                strokeDashoffset: [offset, 0],
+                duration: 200,
+                easing: "easeInOutSine"
+            });
+
+        $(".button").click(function () {
+            basicTimeline.play();
+        });
+
+        $(".text").click(function () {
+            basicTimeline.play();
+        });
+        const doneBtn = document.getElementById('explosion-button')
+        doneBtn.addEventListener('click', function () {
+            doneBtn.innerHTML = 'Thanks You!!';
+        })
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
